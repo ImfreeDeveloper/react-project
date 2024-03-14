@@ -45,6 +45,7 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "no-shadow": "off",
         "@typescript-eslint/ban-ts-comment": "off",
-        "i18next/no-literal-string": ['error', { markupOnly: true }]
+        "i18next/no-literal-string": ['error', { markupOnly: true }],
+        "max-len": ['error', { "ignoreComments": true }]
     }
 }
