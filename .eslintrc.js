@@ -46,6 +46,6 @@ module.exports = {
         "no-shadow": "off",
         "@typescript-eslint/ban-ts-comment": "off",
         "i18next/no-literal-string": ['error', { markupOnly: true }],
-        "max-len": ['error', { "ignoreComments": true }]
+        "max-len": ['error', { "ignoreComments": true, code: 100 }]
     }
 }
