@@ -2,6 +2,7 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
 /** @type {import('jest').Config} */
 const config = {
@@ -207,4 +208,5 @@ const config = {
     // watchman: true,
 };
 
+// eslint-disable-next-line no-undef
 module.exports = config;
