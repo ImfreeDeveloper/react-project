@@ -2,7 +2,7 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
-
+const path = require('path')
 /** @type {import('jest').Config} */
 const config = {
     // All imported modules in your tests should be mocked automatically
@@ -34,9 +34,18 @@ const config = {
         "node"
     ],
     rootDir: '../../',
+    modulePaths: [
+        "<rootDir>src"
+    ],
     testMatch: [
         "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"
     ],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        // eslint-disable-next-line no-undef
+        '\\.svg$': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    },
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
