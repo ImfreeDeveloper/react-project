@@ -1,3 +1,5 @@
+require('loki/configure-react');
+
 module.exports = {
     stories: [
         '../../src/**/*.stories.@(js|jsx|ts|tsx)',
